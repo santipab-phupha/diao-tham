@@ -9,7 +9,13 @@ The interface is English; original messages and task titles keep their language.
 
 ## Access for judges
 
-The production demo URL will be added here after deployment is complete.
+[Open the production demo](https://diao-tham.vercel.app) ·
+[Public source repository](https://github.com/santipab-phupha/diao-tham)
+
+The website is publicly reachable. Production App Check is registered, and
+cloud extraction plus in-app calendar marking were verified on this domain.
+Google sign-in's production domain is authorized; hosted Google sign-in and
+remote Calendar sync are not yet confirmed. Nano inference remains unverified.
 
 1. Open the demo in a desktop browser. **Continue with Google** uses cloud AI;
    Calendar permission is optional and is not needed to capture a message.
@@ -25,6 +31,14 @@ The production demo URL will be added here after deployment is complete.
 For a local-only preview, choose **Set up on this device** and **Basic helper
 (no AI)**. This route needs no Google account. The basic helper is not an AI
 model and does not demonstrate the competition's on-device AI requirement.
+
+If a Google popup does not complete, the following account-free cloud route
+was also verified: enter through **Basic helper (no AI)** and capture
+`Organize the project files tomorrow at 10 am and archive the screenshots tomorrow at 11 am.`
+The basic helper finds no tasks for this wording and preserves the original.
+Choose **Review later**, then **Review message** in My tasks, **Try cloud AI**,
+and **Send this text to AI**. The hosted cloud model returned two tasks with
+the specified times. No Nano download or Google Calendar permission is needed.
 
 No visitor needs the developer's Firebase configuration, API credentials, or
 App Check debug token. Use synthetic messages when evaluating this prototype.

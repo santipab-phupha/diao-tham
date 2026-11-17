@@ -11,9 +11,10 @@ resilience changes. It is not a claim that every flow works on every device.
 - The latest changes were inspected for saving originals before extraction,
   rejecting stale results, explicit cloud consent, and recovery from empty
   extraction results.
-- No unit-test suite, live Nano inference, model download, or live cloud request
-  was run for these latest changes, at the project owner's request.
-- A previous build or test result does not verify this revised runtime flow.
+- No unit-test suite, live Nano inference, or model download was initiated for
+  these latest changes, at the project owner's request. A hosted cloud smoke
+  check was completed during deployment, as recorded below.
+- Build and TypeScript checks do not verify the revised runtime flow.
 
 The latest code adds an 8-second readiness deadline, a 45-second AI request
 deadline, a Stop action, cancellation of superseded operations, and guarded
@@ -47,15 +48,39 @@ chat history.
   resilience edits.
 - Real Google Calendar event creation/update and partial-failure handling. Unit
   mocks do not establish that live OAuth scopes or Calendar writes succeed.
-- Hosted production App Check, Google sign-in, and judge access on the final
-  deployment hostname. Localhost configuration does not establish these.
+- Hosted Google sign-in and remote Calendar sync. The Google account chooser
+  stalled during browser automation and was closed; no successful hosted
+  sign-in is asserted. Account-free access and cloud processing were verified.
 - Actual mobile Safari behavior, cross-device sync, backup import, or a complete
   offline/PWA installation. The latter three are not implemented features.
 - Hackathon submission and public demo-video completion.
 
-## Release evidence to add after publishing
+## Publication evidence
 
-Record the public source URL, production demo URL, deployed commit, successful
-build result, final hostname authorization, and observed hosted checks. Do not
-include App Check debug tokens, OAuth tokens, private credentials, or real user
-messages in this record.
+- Public source: [santipab-phupha/diao-tham](https://github.com/santipab-phupha/diao-tham).
+- Production demo: [diao-tham.vercel.app](https://diao-tham.vercel.app).
+- Initial published and deployed commit: `3ad9611`.
+- Vercel reported the initial production deployment **READY**. An anonymous HTTP
+  request to the production URL returned **200** without Vercel team login.
+- `npm run build` passed during release preparation. Public Firebase environment
+  variables were configured for Vercel Production and Preview; the local App
+  Check debug token was not deployed.
+- reCAPTCHA Enterprise API was enabled without enabling billing or upgrading
+  Firebase's Spark plan. A production score-based key with domain verification
+  restricted to `diao-tham.vercel.app` was created and registered for Diao Tham
+  Web; Firebase showed **Registered**. The production domain was also added
+  to Firebase Authentication's authorized domains.
+- The deployment rebuilt with all nine public configuration variables and Node
+  24. Its public JavaScript bundle contained the expected Firebase and App Check
+  settings and did not contain the local App Check debug token.
+- Production cloud extraction through Firebase AI Logic was verified using a
+  synthetic project-files/screenshots message after explicit in-app consent.
+  It saved two tasks, due 19 November 2026 at 10:00 and 11:00 in Asia/Bangkok.
+  The first request, including App Check initialization, took about 11.3 seconds.
+- Empty basic-helper results preserved the original and allowed reopening it
+  for cloud processing. **Add to Calendar** marked both tasks in the hosted
+  in-app calendar. No real Google Calendar events were created.
+- Nano inference and remote Google Calendar writes were not tested.
+
+Do not include App Check debug tokens, OAuth tokens, private credentials, or real
+user messages in this record.
