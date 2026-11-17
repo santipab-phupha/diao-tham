@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" role="img" aria-labelledby="wordmark-title wordmark-description">
+  <title id="wordmark-title">Diao Tham</title>
+  <desc id="wordmark-description">Diao Tham. Catch it. Do it.</desc>
+  <defs>
+    <linearGradient id="diao-tham-wordmark-spectrum" x1="12" y1="12" x2="54" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4285f4"/>
+      <stop offset=".43" stop-color="#4285f4"/>
+      <stop offset=".57" stop-color="#ea4335"/>
+      <stop offset=".72" stop-color="#fbbc05"/>
+      <stop offset=".90" stop-color="#34a853"/>
+      <stop offset="1" stop-color="#34a853"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 8)" aria-hidden="true">
+    <path fill="url(#diao-tham-wordmark-spectrum)" fill-rule="evenodd" d="M14 7H28C44 7 55 17.5 55 32S44 57 28 57H14A5 5 0 0 1 9 52V12A5 5 0 0 1 14 7ZM21 19V45H28C37.8 45 43 40 43 32S37.8 19 28 19H21Z" clip-rule="evenodd"/>
+  </g>
+  <g font-family="Segoe UI, system-ui, Arial, sans-serif" aria-hidden="true">
+    <text x="80" y="41" fill="#24344e" font-size="32" font-weight="650" letter-spacing="-.9">Diao Tham</text>
+    <text x="82" y="61" fill="#8494ac" font-size="10" font-weight="400" letter-spacing="1.7">catch it. do it.</text>
+  </g>
+</svg>

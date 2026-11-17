@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Diao Tham</title>
+  <defs>
+    <linearGradient id="diao-tham-spectrum" x1="12" y1="12" x2="54" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4285f4"/>
+      <stop offset=".43" stop-color="#4285f4"/>
+      <stop offset=".57" stop-color="#ea4335"/>
+      <stop offset=".72" stop-color="#fbbc05"/>
+      <stop offset=".90" stop-color="#34a853"/>
+      <stop offset="1" stop-color="#34a853"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#diao-tham-spectrum)" fill-rule="evenodd" d="M14 7H28C44 7 55 17.5 55 32S44 57 28 57H14A5 5 0 0 1 9 52V12A5 5 0 0 1 14 7ZM21 19V45H28C37.8 45 43 40 43 32S37.8 19 28 19H21Z" clip-rule="evenodd"/>
+</svg>

@@ -1,0 +1,99 @@
+/* Diao Tham: a white canvas, a four-color monogram, and restrained color accents. */
+:root {
+  --brand-blue: #4285f4;
+  --brand-red: #ea4335;
+  --brand-yellow: #fbbc05;
+  --brand-green: #34a853;
+  --brand-ink: #202124;
+  --brand-spectrum: linear-gradient(110deg, #4285f4 4%, #ea4335 36%, #fbbc05 64%, #34a853 96%);
+  --blue: #1a73e8;
+  background: #f8fafd;
+}
+.brand { gap: 12px; color: var(--brand-ink); letter-spacing: -.75px; }
+.brand-mark {
+  width: 51px;
+  height: 51px;
+  border-radius: 15px;
+  background: #fff;
+  border: 1px solid #e9edf5;
+  box-shadow: 0 4px 13px #4285f410, 0 1px 3px #20212404;
+}
+.brand-mark img { display: block; width: 43px; height: 43px; }
+.brand-wordmark { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 25px; font-weight: 650; line-height: 1.15; }
+.brand-wordmark-accent { color: #3c4043; }
+.brand .brand-wordmark small { margin-top: 6px; color: #8b96a5; font-family: 'Noto Sans Thai', sans-serif; font-size: 9px; letter-spacing: 1.7px; font-weight: 400; }
+.brand:focus-visible { outline-color: var(--brand-blue); border-radius: 13px; }
+
+.hero { background: #f0f5ff; border-color: #e5edfa; }
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--brand-spectrum);
+  opacity: .7;
+  pointer-events: none;
+}
+.hero h1 { color: #263349; }
+.hero .hero-title-accent {
+  color: #1a73e8;
+  background-image: linear-gradient(105deg, #1967d2 0%, #4285f4 40%, #188038 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-eyebrow-line { background: var(--brand-spectrum); height: 3px; width: 26px; }
+.hero .hero-eyebrow { color: #6c829f; }
+.hero .hero-note { color: #6b829f; border-color: #dfe8f7; background: #ffffffa1; font-size: 11px; }
+.hero .hero-note svg { color: #34a853; }
+.hero-image:before { background: linear-gradient(90deg, #f0f5ff 0, #f0f5ff12 20%, transparent 45%); }
+.hero-note-check { background: #e6f4ea; color: #188038; }
+.hero-note-sparkle { color: #f9ab00; }
+.hero-image-note strong { color: #3c4043; }
+
+.button.primary {
+  background: linear-gradient(115deg, #1a73e8, #1967d2);
+  box-shadow: 0 3px 9px #1a73e81c;
+}
+.button.primary:hover:not(:disabled) { background: linear-gradient(115deg, #1967d2, #185abc); }
+.button.primary:focus-visible { outline-color: #8ab4f8; }
+.section-icon.blue { color: #1a73e8; background: linear-gradient(135deg, #e8f0fe, #e9f7ee); }
+.settings-button { border-color: #e4eaf2; color: #68788c; }
+.settings-button:hover { background: #f7faff; border-color: #d4e2f8; }
+.connection-dot { background: var(--brand-yellow); }
+.connection-dot.ready,.live-dot { background: var(--brand-green); }
+.date-tag { color: #1967d2; }
+.date-tag.overdue { color: #c5221f; }
+.count { background: #e8f0fe; color: #1967d2; }
+.filters { background: #edf2f9; }
+.filters button.active { color: #1967d2; background: #fff; }
+.task-check:hover { border-color: #4285f4; background: #f2f7ff; }
+.completed .task-check { background: #e6f4ea; border-color: #b7dfc2; color: #188038; }
+.task-actions button:hover { color: #1a73e8; background: #e8f0fe; }
+.aside-foot svg { color: #34a853; }
+.pending-strip { color: #1967d2; background: #edf4ff; border-color: #dce8fc; }
+.review-dot { background: #f9ab00; }
+.review-selection-count,.review-overview>span { background: #e8f0fe; color: #1967d2; }
+.candidate-title input[type=checkbox] { accent-color: #1a73e8; }
+.candidate-deadline svg { color: #4285f4; }
+.ai-status { border-color: #edf1f6; }
+.ai-status>span>svg { color: #4285f4; }
+.ai-status button { color: #1967d2; }
+
+@media(max-width:700px) {
+  .brand { gap: 10px; }
+  .brand-mark { width: 44px; height: 44px; border-radius: 13px; }
+  .brand-mark img { width: 37px; height: 37px; }
+  .brand-wordmark { font-size: 22px; }
+  .brand .brand-wordmark small { font-size: 8px; letter-spacing: 1.25px; margin-top: 5px; }
+  .hero .hero-note { font-size: 10px; }
+  .hero-eyebrow-line { width: 17px; }
+  .hero-image:before { background: linear-gradient(90deg, #f0f5ff 0, #f0f5ffc9 28%, #f0f5ff25 83%); }
+}
+@media(forced-colors:active) {
+  .hero .hero-title-accent { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
+  .brand-mark { border: 1px solid ButtonText; }
+}
